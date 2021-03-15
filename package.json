@@ -19,10 +19,9 @@
   "scripts": {
     "electron": "electron .",
     "pack": "electron-builder --dir",
-    "dist-win": "electron-builder --win",
-    "dist-linux": "electron-builder --linux",
-    "dist-mac": "electron-builder --mac",
-    "postinstall": "electron-builder install-app-deps"
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps",
+    "rebuild": "electron-rebuild -f -w ./node_modules/.bin/electron-rebuild"
   },
   "build": {
     "appId": "com.eeprom.app",
