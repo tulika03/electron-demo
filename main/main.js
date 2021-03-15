@@ -53,13 +53,8 @@ function createWindow() {
 
       ipcMain.on("portPath", (event,args) => {
         console.log("path is: ", args);
-        if (process.platform == 'win32') {
             portName = args;
-        } else if (process.platform == 'darwin') {
-            // portName = '/dev/cu.usbserial-A800eFN5';
-        } else {
-            portName = '/dev/ttyUSB0';
-        }
+   
         serialCommunication.openPort(portName, mainWindow.webContents);
       })
 
