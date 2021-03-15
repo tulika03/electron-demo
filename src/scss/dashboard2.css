@@ -1,0 +1,151 @@
+  /* h1 {
+    margin-bottom: 20px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #eee;
+  } */
+  
+  /*
+   * Sidebar
+   */
+  
+  /* .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; 
+  } */
+  
+  /* Sidebar navigation */
+  /* .sidebar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+   */
+  /* .sidebar .nav {
+    margin-bottom: 20px;
+  } */
+  
+  /* .sidebar .nav-item {
+    width: 100%;
+  }
+  
+  .sidebar .nav-item + .nav-item {
+    margin-left: 0;
+  }
+  
+  .sidebar .nav-link {
+    border-radius: 0;
+  } */
+  
+  /*
+   * Dashboard
+   */
+  
+   /* Placeholders */
+  /* .placeholders {
+    padding-bottom: 3rem;
+  }
+  
+  .placeholder img {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  } */
+
+  /* .dropdown {
+    width: 50%;
+  } */
+
+
+  nav {
+    background-color: #00727A;
+  }
+
+  .logout-col, .logout-col:focus, .logout-col:hover {
+    background-color: #59D3DB
+  }
+
+  .reset-col, .reset-col:focus, .reset-col:hover  {
+    background-color: #fcda04;
+    color: #434343;
+  }
+
+  .top-bg {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    left: 0;
+    height: 200px;
+    color: black;
+}
+
+.center {       
+  -webkit-box-flex: 1;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  background-color: #07A1A9;
+  height: 200px;
+}
+
+ 
+#triplist {  
+  width: 100%;
+}
+
+.header {
+  z-index: 1;
+  height: 136px!important;
+  min-height: 136px!important;
+  max-height: 136px!important;            
+  padding: 0 46px;  
+  justify-content: flex-end
+}
+
+
+  .content-bg { 
+    min-height: 0;
+    padding: 0 46px;
+    margin-bottom: 20px;
+    height: auto;
+    width :100%;
+    
+    }
+.content { 
+  overflow-y: auto;
+}
+
+.content-card {
+  border-radius: 5px;
+  z-index: 2;
+  background-color: white;
+  padding: 0 46px;
+  height: auto;
+  width: 100%;
+  align-self: center;
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+
+
+  button {
+      font-weight: 600;
+  }
+
+  .bs-stepper .step-trigger:focus {
+    color: #fcda04!important;
+    outline: 0;
+  }
+
+  .warn-icon {
+    color: #f44336;
+    font-size: 3rem;
+  }

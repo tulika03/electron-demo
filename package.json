@@ -1,0 +1,45 @@
+{
+  "name": "electron-serialport-bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./main/main.js",
+  "dependencies": {
+    "@serialport/binding-mock": "^9.0.7",
+    "bootstrap": "^4.6.0",
+    "bs-stepper": "^1.7.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "materialize-stepper": "^3.1.0",
+    "serialport": "^9.0.7"
+  },
+  "devDependencies": {
+    "electron": "^12.0.0",
+    "electron-builder": "^22.10.5",
+    "electron-rebuild": "^2.3.5"
+  },
+  "scripts": {
+    "electron": "electron .",
+    "pack": "electron-builder --dir",
+    "dist-win": "electron-builder --win",
+    "dist-linux": "electron-builder --linux",
+    "dist-mac": "electron-builder --mac",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "appId": "com.eeprom.app",
+    "win": {
+      "target": "portable"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "portable": {
+      "unicode": false,
+      "artifactName": "eeprom_electron_app.exe"
+    }
+  },
+  "author": "",
+  "license": "ISC"
+}

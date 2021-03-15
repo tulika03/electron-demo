@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css"
+        media="screen,projection" />
+    <link rel="stylesheet" href="./scss/dashboard.css">
+    <link rel="stylesheet" href="../node_modules/bs-stepper/dist/css/bs-stepper.min.css">
+    <script type="text/javascript" src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="../node_modules/bs-stepper/dist/js/bs-stepper.min.js"></script>
+    <title>EEPROM</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <img src="./assets/lattice-logo.png" style="width: 60px; height: 40px;padding: 10px;align-self: center;"
+                    class="brand-logo"></a>
+                <ul class="right">
+                    <li><a class="btn waves-effect waves-light logout-col" id="logout"><i
+                                class="material-icons left">exit_to_app</i> LOGOUT</a></li>
+                </ul>
+            </div>
+
+            <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">Serial Monitor</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav> -->
+    </header>
+
+    <div id="triplist">
+        <div class="center" fxLayout="column">
+            <div class="header valign-wrapper">
+                <button class="btn waves-effect waves-light login-button reset-col" type="button">
+                    <i class="material-icons left">refresh</i> RESET
+                </button>
+            </div>
+
+            <div class="content">
+                <div class="content-bg">
+                    <div class="content-card card horizontal">
+                        <div class="card-content">
+                                <div class="bs-stepper vertical">
+                                        <div class="bs-stepper-header" role="tablist">
+                                          <!-- your steps here -->
+                                          <div class="step" data-target="#logins-part">
+                                            <button type="button" class="step-trigger" role="tab" aria-controls="logins-part" id="logins-part-trigger">
+                                              <!-- <span class="bs-stepper-circle">1</span> -->
+                                              <span > <i class="material-icons left warn-icon">warning</i></span>
+                                              <span class="bs-stepper-label">CONNECT DEVICE</span>
+                                            </button>
+                                          </div>
+                                          <div class="line"></div>
+                                          <div class="step" data-target="#information-part">
+                                            <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+                                              <span class="bs-stepper-circle">2</span>
+                                              <span class="bs-stepper-label">CHECK S/N</span>
+                                            </button>
+                                          </div>
+                                          <div class="line"></div>
+                                          <div class="step" data-target="#information-part">
+                                            <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+                                              <span class="bs-stepper-circle">3</span>
+                                              <span class="bs-stepper-label">FETCH S/N</span>
+                                            </button>
+                                          </div>
+                                          <div class="line"></div>
+                                          <div class="step" data-target="#information-part">
+                                            <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+                                              <span class="bs-stepper-circle">4</span>
+                                              <span class="bs-stepper-label">WRITE S/N</span>
+                                            </button>
+                                          </div>
+                                          <div class="line"></div>
+                                          <div class="step" data-target="#information-part">
+                                            <button type="button" class="step-trigger" role="tab" aria-controls="information-part" id="information-part-trigger">
+                                              <span class="bs-stepper-circle">5</span>
+                                              <span class="bs-stepper-label">PRINT S/N</span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="bs-stepper-content">
+                                          <!-- your steps content here -->
+                                          <div id="logins-part" class="content" role="tabpanel" aria-labelledby="logins-part-trigger"></div>
+                                          <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger"></div>
+                                        </div>
+                                      </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- <div class="container-fluid p-4">
+        <div class="dropdown d-flex justify-content-between p-4">
+            <label for="sel1">Ports list:</label>
+            <select class="form-control w-50" id="selPort1">
+                <option value="" disabled selected> </option>
+            </select>
+            <button type="button" id="connectBtn" class="btn btn-primary w-25 pl-3">Connect</button>
+
+            <button type="button" id="disconnectBtn" class="btn btn-danger w-25 pl-3">Disconnect</button>
+        </div>
+        <div class="alert alert-primary" id="demo" role="alert">
+        </div>
+        <div class="p-4">
+            <ul class="list-group" id="serialData"></ul>
+        </div>
+
+        <div class="row g-3" id="inputDevice">
+            <div class="col-auto w-18">
+                <label for="inputMessage" class="visually-hidden">Message to device</label>
+            </div>
+            <div class="col-auto">
+                <input type="text" class="form-control" id="inputMessage" placeholder="Message">
+            </div>
+            <div class="col-auto">
+                <button type="submit" id="message1" class="btn btn-primary mb-3">Send Message</button>
+            </div>
+        </div>
+    </div> -->
+
+
+</body>
+<script src="./jsFiles/renderer.js" type="text/javascript"></script>
+
+</html>
